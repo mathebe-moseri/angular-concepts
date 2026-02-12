@@ -1,1 +1,20 @@
-<p>two-way-binding works!</p>
+<div class="bg-white p-4 rounded-xl m-4 shadow-2xl">
+  <br><br>
+
+  <p class="text-xl font-bold text-gray-400">{{ question1 }}</p>
+  <p class="text-gray-500 font-bold">{{ answer1 }}</p>
+
+  <br><br>
+
+  <p class="text-gray-500 font-bold">{{ explanation }}</p>
+
+  <input type="text" (input)="onInput($event)" placeholder="Type your name" [(ngModel)]="name"
+    class="mt-5 p-4 text-xl font-bold focus:outline-none rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.3)] shadow-gray-400 text-gray-400" />
+
+  <p class="text-xl font-bold text-gray-400 mt-10">You typed: {{ name }}</p>
+
+  <br><br>
+
+  <p class="text-xl font-bold text-gray-400">{{ question }}</p>
+  <p class="text-gray-500 font-bold">{{ answer }}</p>
+</div>

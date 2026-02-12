@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class PropertyBindingComponent {
 
-  question1: string = "What is Property Binding in Angular?";
+  question1: string = "What is Property Binding?";
 
   answer1: string = "Property binding is a superset of string-interpolation, it can do whatever string-interpolation can do. In addition, it can set an element property to a non-string data value like boolean/any data type.";
 

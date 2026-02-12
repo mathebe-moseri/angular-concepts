@@ -1,4 +1,4 @@
-<div class="bg-gray-100 p-4 rounded-xl m-4 shadow-2xl">
+<div class="bg-white p-4 rounded-xl m-4 shadow-2xl">
   <br><br>
 
   <p class="text-xl font-bold text-gray-400">{{ question1 }}</p>
@@ -9,9 +9,9 @@
   <p class="text-gray-500 font-bold">{{ explanation }}</p>
 
   <input type="text" placeholder="type here" [disabled]="isDisabled" [value]="isDisabled"
-    class="mt-5 p-4 text-xl font-bold focus:outline-none rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.3)] shadow-gray-400 text-gray-400" />
+    class="mt-5 p-4 text-xl font-bold focus:outline-none rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.3)] shadow-gray-400 text-gray-400 hover:bg-green-400 hover:text-3xl transition-all ease-in-out duration-700" />
 
   <p class="text-xl font-bold text-gray-400 mt-10">{{ question }}</p>
   <p class="text-gray-500 font-bold">{{ answer }}</p>
 </div>
-<p class="text-gray-500 font-bold bg-green-400 rounded-xl mt-5 p-4 m-4">{{ comparison }}</p>
+<p class="text-gray-500 font-bold bg-gray-100 rounded-xl mt-5 p-4 m-4">{{ comparison }}</p>

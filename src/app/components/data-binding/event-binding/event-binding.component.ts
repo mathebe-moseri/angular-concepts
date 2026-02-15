@@ -10,11 +10,9 @@ import { Component } from '@angular/core';
 })
 export class EventBindingComponent {
 
-  question1: string = "What is Property Binding?";
-  question2: string = "What is Event Binding in Angular?";
+  question1: string = "What is Event Binding?";
 
-  answer1: string = "Property binding is a superset of string-interpolation, it can do whatever string-interpolation can do. In addition, it can set an element property to a non-string data value like boolean/any data type.";
-  answer2: string = "Event binding in Angular allows us to listen to events that occur in the view (such as button clicks, key presses, or mouse movements) and respond to them in the component. It uses parentheses ( ) syntax to bind an event to a method in the component. When the event occurs, the specified method is executed. This enables communication from the view (HTML) to the component (TypeScript).";
+  answer1: string = "Event binding is a mechanism that allows the component to respond to user actions or browser events occurring in the view (DOM).";
 
 
 
@@ -31,6 +29,8 @@ export class EventBindingComponent {
 
   helloMessage: string = "Console logging to indicate that a click event triggeres the component, from view to component"
 
+  message: string = '';
+
   toggle() {
     this.isDisabled = !this.isDisabled;
   }
@@ -41,6 +41,17 @@ export class EventBindingComponent {
 
   onInput(event: any) {
   console.log(event.target.value);
+  }
+
+  onMouseOver() {
+    this.message = "Mouse is over!";
+    console.log(this.message);
+
+  }
+
+  onMouseOut() {
+    this.message = "Hover over the box";
+    console.log(this.message);
   }
 
 }

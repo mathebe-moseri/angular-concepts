@@ -1,1 +1,74 @@
-<p>directives works!</p>
+<div class="bg-white p-4 rounded-xl m-4 shadow-2xl">
+  <p class="text-xl font-bold text-gray-400">{{ question1 }}</p>
+  <p class="text-gray-500 font-bold">{{ answer1 }}</p>
+  <button (click)="changeColor()" [ngClass]="isColor ? 'bg-red-400' : 'bg-green-400'"
+    class="text-center p-2 font-bold rounded-lg m-10">{{ isColor ? 'Red' : 'Green' }}</button>
+  <div class="rounded-xl p-4 bg-sky-100 shadow-xl">
+    <p class="font-bold text-sky-600 text-xl">
+      Types of Directives<br>
+      This are all the built-in directives provided by Angular!
+    </p>
+    <ul class="text-gray-500 font-bold mt-3">Structural Directives: => <strong>Change appearance of DOM by adding or
+        removing elements.</strong>
+      <li class="text-gray-400 font-bold ml-5">*ngIf: => <strong>*ngIf Directive is used to add or remove items based on
+          the if condition.</strong></li>
+      <li class="text-gray-400 font-bold ml-5">*ngFor: => <strong>The *ngFor directive is used to iterate a list of items and then display them. Like the forLoop</strong></li>
+      <li class="text-gray-400 font-bold ml-5">*ngSwitch: => <strong>*ngSwitch is a structural directive used in combination with *ngSwitchCase and *ngSwitchDefault that are both structural directives.</strong></li>
+    </ul>
+    <ul class="text-gray-500 font-bold mt-5">Attribute Directives: => <strong>Change the appearance or behavior of an
+        element.</strong>
+      <li class="text-gray-400 font-bold ml-5">[ngClass]</li>
+      <li class="text-gray-400 font-bold ml-5">[ngStyle]: => is an attribute directive that updates styles for the HTML element.</li>
+    </ul>
+    <ul class="text-gray-500 font-bold mt-5">
+      <li>
+        Component: => <strong>Directives with its own template. Refers to the components that consists of four files,
+          html, css, ts and the unit testing one that we hardly touch.</strong>
+      </li>
+    </ul>
+  </div>
+
+  <div class="bg-white p-4 rounded-xl m-4 shadow-2xl">
+  <ul>
+    <li *ngIf="students.length == 0">
+      Two students
+    </li>
+    <li *ngIf="students.length == 0">
+      Zero students
+    </li>
+  </ul>
+</div>
+
+<li *ngFor="let student of students">
+  {{ student.name }}
+</li>
+
+<!-- The number of students present in the list, then we will get 'Two Students' true will be pasted ngSwitchDefault whatever case is true will be executed otherwise the ngSwitchDefault will be executed-->
+<ul [ngSwitch]="studentList.length">
+  <li *ngSwitchCase=0>Zero Student</li>
+  <li *ngSwitchCase=1>One Student</li>
+  <li *ngSwitchCase=2>Two Students</li>
+  <li *ngSwitchCase=4>Three Students</li>
+  <li *ngSwitchDefault>More Students</li>
+</ul>
+</div>
+
+<div class="bg-white p-4 rounded-xl m-4 shadow-2xl">
+  <p *ngIf="cars.length == 4">{{ cars }}</p>
+</div>
+
+<div class="bg-white p-4 rounded-xl m-4 shadow-2xl">
+  <p *ngFor="let car of cars">{{ car }}</p>
+</div>
+
+<div style="background-color: red;">I am Happy</div>
+
+<div [ngStyle]="{'background-color': 'red', 'color': colorName1}">I am Happiest</div>
+
+<div [ngStyle]="{'background-color': colorName}">I am the most Happy</div>
+
+<div [ngStyle]="{'color': colorName1}">I am the most Happy</div>
+
+<div [ngClass]="className">I am ngClass Happy</div>
+
+

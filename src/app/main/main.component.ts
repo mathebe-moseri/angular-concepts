@@ -3,11 +3,12 @@ import { StringInterpolationComponent } from '../components/data-binding/string-
 import { PropertyBindingComponent } from '../components/data-binding/property-binding/property-binding.component';
 import { EventBindingComponent } from '../components/data-binding/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from '../components/data-binding/two-way-binding/two-way-binding.component';
+import { DirectivesComponent } from '../components/directives/directives.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [StringInterpolationComponent, PropertyBindingComponent, EventBindingComponent, TwoWayBindingComponent],
+  imports: [StringInterpolationComponent, PropertyBindingComponent, EventBindingComponent, TwoWayBindingComponent, DirectivesComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

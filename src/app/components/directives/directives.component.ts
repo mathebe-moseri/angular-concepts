@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LoggingService } from '../../services/logging.service';
 
 @Component({
   selector: 'app-directives',
@@ -47,5 +48,9 @@ export class DirectivesComponent {
 
   changeColor() {
     this.isColor = !this.isColor;
+  }
+
+  constructor(private LoggingService: LoggingService) {
+    this.LoggingService.LogError3();
   }
 }

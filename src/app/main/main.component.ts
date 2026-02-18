@@ -5,11 +5,13 @@ import { EventBindingComponent } from '../components/data-binding/event-binding/
 import { TwoWayBindingComponent } from '../components/data-binding/two-way-binding/two-way-binding.component';
 import { DirectivesComponent } from '../components/directives/directives.component';
 import { PipesComponent } from '../components/decorators/pipes/pipes.component';
+import { LoginComponent } from '../components/login/login.component';
+import { MenuComponent } from '../components/menu/menu.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [StringInterpolationComponent, PropertyBindingComponent, EventBindingComponent, TwoWayBindingComponent, DirectivesComponent, PipesComponent],
+  imports: [StringInterpolationComponent, PropertyBindingComponent, EventBindingComponent, TwoWayBindingComponent, DirectivesComponent, PipesComponent, LoginComponent, MenuComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

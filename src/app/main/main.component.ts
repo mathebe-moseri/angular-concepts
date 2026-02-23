@@ -9,11 +9,12 @@ import { LoginComponent } from '../components/login/login.component';
 import { MenuComponent } from '../components/menu/menu.component';
 import { LifecycleHooksComponent } from '../components/lifecycle-hooks/lifecycle-hooks.component';
 import { ParentComponent } from '../components/parent/parent.component';
+import { ObservablesComponent } from '../components/observables/observables.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [StringInterpolationComponent, PropertyBindingComponent, EventBindingComponent, TwoWayBindingComponent, DirectivesComponent, PipesComponent, LoginComponent, MenuComponent, LifecycleHooksComponent, ParentComponent],
+  imports: [StringInterpolationComponent, PropertyBindingComponent, EventBindingComponent, TwoWayBindingComponent, DirectivesComponent, PipesComponent, LoginComponent, MenuComponent, LifecycleHooksComponent, ParentComponent, ObservablesComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
